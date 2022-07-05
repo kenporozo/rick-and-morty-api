@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "e60cbff6-2167-4d5a-8b56-ac511c59c96b",
+		"name": "rick-and-morty-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18865877"
+	},
+	"item": [
+		{
+			"name": "get characters",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb25heWtlckBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1VTRVIiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2FwaS9sb2dpbiIsImV4cCI6MTY1NzA0NzEyN30.y7ZmzaCBQ-Vtc9iXe-AEvYq6tizaKu6l1Gby_08syNU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/characters?gender=male&status=dead",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"characters"
+					],
+					"query": [
+						{
+							"key": "gender",
+							"value": "male"
+						},
+						{
+							"key": "status",
+							"value": "dead"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"jonayker@mail.com\",\r\n    \"password\" : \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get characters",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb25heWtlckBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1VTRVIiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2FwaS9sb2dpbiIsImV4cCI6MTY1NzA0NzI5N30.0dTZUHi2EaRTttBhBCU1besxxBWUKt4GtcDIKjDw4EY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/characters/1,2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"characters",
+						"1,2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all characters",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb25heWtlckBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1VTRVIiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2FwaS9sb2dpbiIsImV4cCI6MTY1NzA0Nzg2M30.6-kA95Z5y5XGxorfudSM0pIOX4b6mPwMIl-oHfZTjFo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/characters",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"characters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insert character",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb25heWtlckBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1VTRVIiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2FwaS9sb2dpbiIsImV4cCI6MTY1NzA0NzI5N30.0dTZUHi2EaRTttBhBCU1besxxBWUKt4GtcDIKjDw4EY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Summer Smith\",\r\n    \"status\" : \"ALIVE\",\r\n    \"gender\" : \"FEMALE\",\r\n    \"image\" : \"https://rickandmortyapi.com/api/character/avatar/3.jpeg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/characters",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"characters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update character",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb25heWtlckBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1VTRVIiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2FwaS9sb2dpbiIsImV4cCI6MTY1NzA0NzI5N30.0dTZUHi2EaRTttBhBCU1besxxBWUKt4GtcDIKjDw4EY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Summer Smith\",\r\n    \"status\" : \"DEAD\",\r\n    \"gender\" : \"FEMALE\",\r\n    \"image\" : \"https://rickandmortyapi.com/api/character/avatar/3.jpeg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/characters/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"characters",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete character",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb25heWtlckBtYWlsLmNvbSIsInJvbGVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1VTRVIiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2FwaS9sb2dpbiIsImV4cCI6MTY1NzA0NzI5N30.0dTZUHi2EaRTttBhBCU1besxxBWUKt4GtcDIKjDw4EY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/characters/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"characters",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "base API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://rickandmortyapi.com/api/character",
+					"protocol": "https",
+					"host": [
+						"rickandmortyapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"character"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
